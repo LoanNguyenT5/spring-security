@@ -51,3 +51,6 @@ jobs:
 
       - name: Run the updated Docker container
         run: docker run -d --name my-app -p 8888:8080 loannguyent5/spring-security-web-app
+
+      - name: Check running containers
+        run: docker ps
