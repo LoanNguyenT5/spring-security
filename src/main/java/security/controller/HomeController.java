@@ -25,7 +25,7 @@ public class HomeController {
 	@RequestMapping(value="/user", method = RequestMethod.GET)
 	public ModelAndView visitUser() {
 		ModelAndView model = new ModelAndView("admin");
-		model.addObject("title", "User Control Test");
+		model.addObject("title", "Hello User Test CICD");
 		model.addObject("message", "This page demonstrates how to use Spring security.");
 
 		return model;
