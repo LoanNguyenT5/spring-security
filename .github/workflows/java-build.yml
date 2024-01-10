@@ -23,7 +23,7 @@ jobs:
         run: mvn -B clean install
 
       - name: Log in to GitHub Container Registry
-        run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login docker.pkg.github.com -u ${{ github.actor }} --password-stdin
+        run: echo "${{ secrets.DOCKER_TOKEN }}" | docker login docker.pkg.github.com -u ${{ github.actor }} --password-stdin
 
       - name: Build Docker image
         run: docker build -t docker.pkg.github.com/loannnguyent5/spring-security/web-app .
